@@ -1,12 +1,13 @@
 package antifraud.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+import jakarta.validation.constraints.Min;
 
 
 public class Transaction {
 
     @JsonIgnore
+    @Min(value = 1,message = "Minimum transaction value is 1")
     private Long value;
     private final String result;
 

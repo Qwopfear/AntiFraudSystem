@@ -9,10 +9,10 @@ import java.util.Map;
 
 
 @RestController()
-@RequestMapping("")
+@RequestMapping("/api/antifraud")
 public class TransactionController {
 
-    @PostMapping("/api/antifraud/transaction")
+    @PostMapping("/transaction")
     public ResponseEntity<Object> commitTransaction(
             @RequestBody Map<String, Long> json
     ) {
